@@ -76,18 +76,6 @@ const AddMovie = () => {
                            </div>}
                         </div>;
 
-
-   
-   const defaultWidth = 630;
-   const defaultHeight = 150;
-   let expandWidth = 1100;
-   let expandHeight = 450;
-   if(window.innerWidth < 1200 && window.innerWidth > 1000) {
-      expandWidth = 900
-   } else if(window.innerWidth < 1000 && window.innerWidth > 800) {
-      expandWidth = 700
-   }
-
    return (
 
       <div className={title ? styles.cardExpand : styles.card} >
