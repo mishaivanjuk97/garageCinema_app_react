@@ -291,6 +291,13 @@
 
       .find {
 
+         .loading {
+            height: 30px;
+            width: 30px;
+            border-width: 3px;
+            left: 45%;
+         }
+
          form {
             .findBtn {
                margin-top: 10px;

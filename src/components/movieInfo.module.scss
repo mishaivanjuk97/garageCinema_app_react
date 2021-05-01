@@ -192,6 +192,13 @@
 }
 
 @media (max-width: 550px) {
+   .loading {
+      height: 30px;
+      width: 30px;
+      border-width: 3px;
+      left: 45%;
+   }
+
    .card {
       padding: 25px;
       width: 350px;

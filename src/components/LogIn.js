@@ -17,7 +17,6 @@ const LogIn = () => {
 
    const screenHeight = window.innerHeight;
    const screenWidth = window.innerWidth; 
-   console.log(screenHeight)
 
    const mobile = <Fragment>
       <div className={styles.showcase}>

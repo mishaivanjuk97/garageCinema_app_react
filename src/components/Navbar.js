@@ -1,16 +1,19 @@
 import { React, useState } from 'react'
 import styles from './navbar.module.scss'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 
 const Navbar = () => {
    const [modal, setModal] = useState(false)
    const [mobileNav, setMobileNav] = useState(false)
-   
+   const history = useHistory();
    const logOut = () => {
+      history.push('/')
+
       localStorage.removeItem('user');
       localStorage.removeItem('movies');
       window.location.reload();
       setModal(false);
+
    }
 
    const showMobileNav = <div className={styles.mobileNavActive} style={mobileNav ? {transform: 'translateX(0%)'} : {transform: 'translateX(-200%)'}}>

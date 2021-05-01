@@ -58,10 +58,11 @@ span {
             margin-bottom: 20px;
             height: 30px;
             font-size: 2rem;
-            padding-bottom: 5px;
+            padding-bottom: 10px;
             background: transparent;
             border: none;
             border-bottom: 2px solid #1f1f1f;
+            -webkit-appearance: none;
 
             &:focus {
                outline: 0;
@@ -587,22 +588,22 @@ span {
 
 @media (max-width: 500px) {
    .showcase {
-      padding: 20px;
+      padding: 10px;
 
       .left {
 
          &::before {
-            top: -20%;
+            top: -30%;
          }
       }
 
       .welcomeText {
-         top: -7%;
+         top: -11%;
       }
 
       .aboutText {
          width: 350px;
-         top: -10%;
+         top: -15%;
       
          h2 {
            font-size: 1.1rem;
