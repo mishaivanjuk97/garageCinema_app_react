@@ -1,0 +1,699 @@
+span {
+   color: chocolate;
+}
+
+.showcase {
+   overflow: hidden;
+   display: flex;
+   justify-content: space-between;
+   height: 100vh;
+   align-items: center;
+   text-align: center;
+   padding: 0 150px;
+   background: url('https://i1.wp.com/www.acousticpixel.co.uk/wp-content/uploads/2018/11/DSF5839-exit-sockets-gone.jpg?fit=3264%2C2131&ssl=1');
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+
+   .left {
+      width: 35%;
+      position: relative;
+      transition: all 1s;
+      animation: slideFromLeft 1s ease;
+
+      &::before {
+         content: '';
+         position: absolute;
+         top: -80%;
+         left: -80%;
+         width: 200%;
+         height: 1500px;
+         background-color: #fff;
+         opacity: 0.8;
+         transform: skewX(-24deg);
+      }
+
+      .form {
+         position: relative;
+         display: flex;
+         flex-direction: column;
+         align-items: left;
+         text-align: left;
+         font-size: 2rem;
+         width: 600px;
+         z-index: 10;
+
+         h2 {
+            margin-bottom: 30px;
+            color: chocolate;
+         }
+
+         label {
+            margin-bottom: 20px;
+         }
+
+         input {
+            width: 80%;
+            color: chocolate;
+            margin-bottom: 20px;
+            height: 30px;
+            font-size: 2rem;
+            padding-bottom: 5px;
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid #1f1f1f;
+
+            &:focus {
+               outline: 0;
+            }
+         }
+
+      }
+   }
+
+   .btn {
+      margin-top: 20px;
+      width: 130px;
+      height: 40px;
+      font-size: 1.4rem;
+      border: 0;
+      background-color: chocolate;
+      color: #fff;
+      cursor: pointer;
+
+      &:hover {
+         background-color: transparent;
+         color: chocolate;
+         border: 1px solid chocolate;
+      }
+
+      &:focus {
+         outline: 0;
+      }
+
+      &:active {
+         transform: scale(0.9);
+      }
+   }
+
+   .welcomeText {
+      width: 25%;
+      color: #fff;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 100;
+      cursor: default;
+      animation: show 1s ease;
+      margin-right: 100px;
+      transition: all 1s;
+
+      .title {
+         font-size: 2rem;
+         margin-bottom: 15px;
+         text-shadow: 5px 5px 10px #000 ;
+      }
+   }
+
+   .aboutText {
+      width: 30%;
+      position: relative;
+      z-index: 100;
+      padding: 10px 20px;
+      font-size: 1.1rem;
+      transition: all 1s;
+
+      &::after {
+         content: '';
+         position: absolute;
+         top: -400px;
+         right: -80%;
+         width: 240%;
+         height: 1500px;
+         background-color: #fff;
+         opacity: 0.8;
+         transform: skewX(-24deg);
+      }
+
+      h2 {
+         position: relative;
+         z-index: 100;
+      }
+   }
+}
+
+@keyframes slideFromLeft {
+   0% {
+      transform: translateX(-100%);
+   }
+   100% {
+      transform: translateX(0);
+   }
+}
+
+@keyframes slideFromRight {
+   0% {
+      transform: translateX(100%);
+   } 
+   100% {
+      transform: translateX(0);
+   }
+}
+
+@keyframes slideFromTop {
+   0% {
+      transform: translateY(-100%);
+   }
+   100% {
+      transform: translateY(0);
+   }
+}
+
+@keyframes show {
+   0% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
+   }
+}
+
+
+@media (max-width: 1800px) {
+   .showcase {
+      padding: 0 100px;
+
+      .welcomeText {
+         margin-right: 0;
+      }
+   }
+}
+
+@media (max-width: 1730px) {
+   .showcase {
+      .left {
+
+         &::before {
+            top: -85%;
+         }
+         .form {
+            width: 500px;
+            font-size: 1.8rem;
+         }
+      }
+
+      .welcomeText {
+         
+         .title {
+            font-size: 1.8rem;
+         }
+      }
+
+      .aboutText {
+         font-size: 1rem;
+         &::after {
+            top: -450px;
+            width: 230%;   
+         }
+      }
+   }   
+}
+
+@media (max-width: 1600px) {
+   .showcase {
+      padding: 70px;
+
+      .left{
+         padding-left: 30px;
+      }
+   }
+}
+
+@media (max-width: 1500px) {
+   .showcase {
+
+      .left {
+
+         &::before {
+            height: 260%;
+            top: -80%;
+         }
+
+         .form {
+            width: 450px;
+            font-size: 1.7rem;
+
+            label {
+               margin-bottom: 15px;
+            }
+
+            input {
+               height: 20px;
+               font-size: 1.7rem;
+            }
+         }
+      }
+
+      .btn {
+         width: 100px;
+         height: 30px;
+         font-size: 1.2rem;
+      }
+
+      .welcomeText {
+
+         .title {
+            font-size: 1.6rem;
+         }
+      }
+   }
+}
+
+@media (max-width: 1400px) {
+   .showcase {
+      padding: 50px;
+      .left {
+         &::before {
+            top: -85%;
+            height: 270%;
+         }
+
+         .form {
+            width: 450px;
+            font-size: 1.5rem;
+
+            h2 {
+               font-size: 2rem;
+            }
+
+            label {
+               margin-bottom: 15px;
+            }
+
+            input {
+               height: 20px;
+               font-size: 1.5rem;
+               border-bottom: 1px solid #1f1f1f;
+            }
+         }
+      }
+
+      .btn {
+         width: 100px;
+         height: 30px;
+         font-size: 1.2rem;
+      }
+
+      .welcomeText {
+
+         .title {
+            font-size: 1.4rem;
+         }
+      }
+
+      .aboutText {
+         font-size: 0.9rem;
+      }
+   }
+}
+
+@media (max-width: 1260px) {
+   .showcase {
+      padding: 50px;
+      .left {
+
+         &::before {
+            width: 195%;
+            height: 270%;
+            top: -80%;
+         }
+
+         .form {
+            width: 420px;
+            font-size: 1.3rem;
+
+            h2 {
+               font-size: 2rem;
+            }
+
+            label {
+               margin-bottom: 15px;
+            }
+
+            input {
+               height: 15px;
+               font-size: 1.3rem;
+               border-bottom: 1px solid #1f1f1f;
+            }
+         }
+      }
+
+      .btn {
+         margin-top: 10px;
+         width: 80px;
+         height: 23px;
+         font-size: 1rem;
+      }
+
+      .welcomeText {
+
+         .title {
+            font-size: 1.3rem;
+         }
+      }
+
+      .aboutText {
+         font-size: 0.8rem;
+         width: 400px;
+      }
+   }
+}
+
+@media (max-width: 1200px) {
+   .showcase {
+
+      .welcomeText {
+         width: 28%;
+      }
+
+      .aboutText {
+
+         &::after {
+            width: 230%;
+         }
+      }
+   }
+}
+
+@media (max-width: 1150px) {
+   .showcase {
+
+      .left {
+
+         &::before {
+            width: 210%;
+            height: 300%;
+            top: -75%;
+            left: -75%;
+         }
+      }
+
+      .aboutText {
+
+         &::after {
+            width: 230%;
+         }
+      }
+   }
+}
+
+@media (max-width: 1080px) {
+   .showcase {
+
+      .left {
+
+         &::before {
+            top: -90%;
+         }
+      }
+
+      .aboutText {
+         width: 500px;
+         &::after {
+            width: 240%;
+         }
+      }
+   }
+}
+
+@media (max-width: 1024px) {
+   .showcase {
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+
+      .left {
+         width: 100%;
+         animation: slideFromTop 1s ease;
+         &::before {
+         top: -70%;
+         left: -70%;
+         width: 200%;
+         height: 200%;
+         background-color: #fff;
+         opacity: 0.8;
+         transform: skewY(-15deg);
+         } 
+
+         .form {
+            margin: 80px auto 0;
+            font-size: 1.7rem;
+
+            h2 {
+               font-size: 3rem;
+            }
+
+            input {
+               width: 100%;
+            }
+         }
+      }
+
+      .btn {
+         width: 130px;
+         height: 40px;
+      }
+
+      .welcomeText {
+
+         .title {
+            font-size: 2rem;
+         }
+      }
+
+      .aboutText {
+
+         &::after {
+            content: '';
+            position: absolute;
+            top: -180px;
+            right: -62%;
+            width: 220%;
+            height: 800px;
+            background-color: #fff;
+            opacity: 0.8;
+            transform: skewY(-15deg);
+         }
+
+         h2 {
+            font-size: 2rem;
+            margin-bottom: 40px;
+         }
+      }
+   }
+}
+
+@media (max-width: 850px) {
+   .showcase {
+      padding-bottom: 30px;
+      .left {
+         width: 100%;
+         animation: slideFromTop 1s ease;
+         height: 500px;
+         &::before {
+         top: -40%;
+         height: 160%;
+         } 
+
+         .form {
+            margin: 20px auto 0;
+            font-size: 1.5rem;
+
+            h2 {
+               font-size: 2.5rem;
+               margin-bottom: 10px;
+            }
+
+            input {
+               font-size: 1.5rem;
+            }
+         }
+      }
+
+      .btn {
+         width: 100px;
+         height: 30px;
+      }
+
+      .aboutText {
+
+         &::after {
+            top: -100px;
+            height: 550px;
+         }
+
+         h2 {
+            font-size: 1.5rem;
+         }
+      }
+   }
+}
+
+@media (max-width: 600px) {
+   .showcase {
+      padding-bottom: 30px;
+      .left {
+         padding: 0;
+         width: 100%;
+         animation: slideFromTop 1s ease;
+         &::before {
+         top: -40%;
+         height: 140%;
+         } 
+
+         .form {
+            margin: 20px auto 0;
+            font-size: 1.2rem;
+            width: 300px;
+
+            h2 {
+               font-size: 2rem;
+               margin-bottom: 10px;
+            }
+
+            input {
+               font-size: 1.2rem;
+               margin-bottom: 10px;
+               height: 20px;
+            }
+         }
+      }
+
+      .btn {
+         width: 90px;
+         height: 25px;
+         font-size: 1rem;
+      }
+
+      .welcomeText {
+         .title {
+            font-size: 1.5rem;
+         }
+      }
+   }
+}
+
+@media (max-width: 500px) {
+   .showcase {
+      padding: 20px;
+
+      .left {
+
+         &::before {
+            top: -20%;
+         }
+      }
+
+      .welcomeText {
+         top: -7%;
+      }
+
+      .aboutText {
+         width: 350px;
+         top: -10%;
+      
+         h2 {
+           font-size: 1.1rem;
+         }
+      }
+   }
+}
+
+@media (max-width: 400px) {
+   .showcase {
+      padding: 20px;
+
+      .left {
+
+         &::before {
+            top: -20%;
+         }
+
+         .form {            
+            margin: 30px auto 0;
+            width: 250px;
+
+            label {
+               margin-bottom: 5px;
+            }
+         }
+      }
+
+      .welcomeText {
+         height: 40%;
+
+         .title {
+
+            font-size: 1.2rem;
+         }
+      }
+   }
+}
+
+@media (max-width: 360px) {
+   .showcase {
+
+      .aboutText {
+
+         h2 {
+            font-size: 1rem;
+         }
+      }
+   }
+}
+
+@media (max-width: 320px) {
+   .showcase {
+
+      .left {
+
+         .form {
+            margin-top: 15px;
+            font-size: 1rem;
+
+            h2 {
+               font-size: 1.6rem;
+            }
+         }
+      }
+
+      .btn {
+         font-size: 0.7rem;
+         height: 20px;
+         width: 60px;
+      }
+
+      .welcomeText {
+         .title {
+            font-size: 1rem;
+         }
+      }
+
+      .aboutText {
+         width: 270px;
+         top: -15%;
+
+         &::after{
+            height: 500px;
+            top: -60px;
+         }
+
+         h2 {
+            font-size: 0.9rem;
+
+         }
+      }
+   }
+}

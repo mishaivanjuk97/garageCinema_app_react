@@ -1,0 +1,134 @@
+.errorMessage {
+   margin: 30px;
+   text-align: center;
+   font-size: 2rem;
+    
+      a {
+         text-decoration: none;
+         color: chocolate;
+         padding: 3px 10px;
+
+         &:hover {
+            border: chocolate 1px solid;
+         }
+      }
+}
+
+a {
+   text-decoration: none;
+   color: #000;
+}
+
+.card {
+   width: 830px;
+   height: 150px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   padding: 20px;
+   margin: 20px auto;
+   border: 1px solid #000;
+   transition: transform 0.1s;
+
+   .header {
+      display: flex;
+      
+      h2 {
+         margin-right: 15px;
+      }
+   }
+
+   .info {
+      font-size: 1.05rem;
+
+      span {
+         font-weight: 600;
+      }
+   }
+
+   &:hover {
+      box-shadow: -15px 15px 1px rgba(248, 156, 91, 0.671);
+      cursor: pointer;
+      transform: scale(1.02);
+   }
+}
+
+.loading {
+   position: absolute;
+   top: 200px;
+   left: 48%;
+   border: 8px solid #f3f3f3;
+   border-top: 8px solid chocolate;
+   border-radius: 50%;
+   width: 80px;
+   height: 80px;
+   animation: spin 0.8s ease infinite;
+}
+
+@keyframes spin {
+   0% { transform: rotate(0deg); }
+   100% { transform: rotate(360deg); }
+ }
+
+@media (max-width: 900px) {
+   .card {
+      width: 650px;
+   }
+
+   .loading {
+      height: 50px;
+      width: 50px;
+      border-width: 5px;
+      left: 45%;
+   }
+}
+
+@media (max-width: 700px) {
+   .card {
+      width: 500px;
+      height: 180px;
+   }
+}
+
+@media (max-width: 550px) {
+   .card {
+      width: 400px;
+      height: 180px;
+   }
+}
+
+@media (max-width: 450px) {
+   .card {
+      width: 350px;
+      height: 200px;
+   }
+
+   .loading {
+      height: 30px;
+      width: 30px;
+      border-width: 3px;
+      left: 45%;
+   }
+}
+
+@media (max-width: 380px) {
+   .card {
+      width: 300px;
+      height: 190px;
+
+      .info {
+         font-size: 0.95rem;
+      }
+   }
+}
+
+@media (max-width: 350px) {
+   .card {
+      width: 280px;
+      height: 190px;
+
+      .info {
+         font-size: 0.95rem;
+      }
+   }
+}

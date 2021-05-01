@@ -1,0 +1,273 @@
+.nav {
+   z-index: 11111;
+   width: 100%;
+   height: 60px;
+   background-color: #000;
+   color: #fff;
+   font-size: 1.5rem;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   padding: 0px 20px;
+   
+
+   h2 {
+      margin-bottom: 7px;
+
+      span {
+         color: chocolate;
+      }
+   }
+
+   .links {
+      font-size: 1.2rem;
+      display: flex;
+      justify-content: space-between;
+      width: 280px;
+
+      a {
+         padding: 5px;
+         color: #fff;
+         text-decoration: none;
+         transition: 0.1s;
+         cursor: pointer;
+
+         &:hover {
+            color: chocolate;
+            border-color: chocolate;
+         }
+      }
+
+      .logOutBtn {
+         background: transparent;
+         font-size: 1.2rem;
+         border: 1px solid #fff;
+         padding: 5px;
+         color: #fff;
+         transition: 0.1s;
+         cursor: pointer;
+         
+         &:hover {
+            border-color: chocolate;
+            color: chocolate;
+         }
+      }
+   }
+
+   .icon {
+      display: none;
+      background-color: #000;
+      border: 0;
+      cursor: pointer;
+      padding: 0;
+      position: relative;
+      height: 40px;
+      width: 40px;
+
+      &:focus {
+         outline: 0;
+      }
+
+      .line {
+         background-color: #fff;
+         width: 30px;
+         height: 2px;
+         position: absolute;
+         top: 10px;
+         left: 5px;
+         transition: transform 0.1s ease;
+      }
+
+      .line1 {
+         @extend .line;
+
+      }
+
+      .line2 {
+         @extend .line;
+         top: 20px;
+         transition: 0.2s;
+      }
+
+      .line3 {
+         @extend .line;
+         top: 30px
+      }
+
+      .line1Active {
+         @extend .line1;
+         transform: rotate(-45deg) translateY(14px);
+      }
+
+      .line2Active {
+         @extend .line2;
+         display: none;
+      }
+
+      .line3Active {
+         @extend .line3;
+         transform: rotate(45deg) translateY(-14px);
+
+      }
+   }
+
+   .modal {
+      transform: translateY(0);
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      transition: transform 0.5s;
+
+      .card {
+         width: 300px;
+         padding: 10px 20px 20px;
+         background-color: #fff;
+         color: #000;
+         margin: 80px auto;
+         border: 1px solid #000;
+         box-shadow: -15px 15px 1px rgba(247, 141, 65, 0.671);
+
+         .answer {
+            margin-top: 20px;
+            display: flex;
+            
+            .btn {
+               width: 50px;
+               background: transparent;
+               font-size: 1rem;
+               border: 1px solid #000;
+               padding: 2px 5px;
+               cursor: pointer;
+               transition: 0.1s;
+            }
+
+            .btnY {
+               margin-right: 20px;
+               
+               &:hover {
+                  color: #da1e37;
+                  border: 1px solid #da1e37;
+               }
+            }
+
+            .btnN {
+
+               &:hover {
+                  border: 1px solid #538d22;
+                  color: #538d22;
+               }
+            }
+         }
+      }
+   }
+
+   .mobileNav {
+      font-size: 1.3rem;
+      display: none;
+      justify-content: left;
+      align-items: center;
+      background-color: #000;
+      height: 60px;
+      width: 280px; 
+      position: absolute;
+      transform: translateX(200%);
+      transition: transform 0.5s ease;
+
+      a {
+         margin-right: 30px;
+         padding: 5px;
+         color: #fff;
+         text-decoration: none;
+         transition: 0.1s;
+         cursor: pointer;
+
+         &:hover {
+            color: chocolate;
+            border-color: chocolate;
+         }
+      }
+
+      .logOutBtn {
+         background: transparent;
+         font-size: 1.3rem;
+         border: 1px solid #fff;
+         padding: 5px;
+         color: #fff;
+         transition: 0.1s;
+         cursor: pointer;
+         
+         &:hover {
+            border-color: chocolate;
+            color: chocolate;
+         }
+      }
+   }
+
+   .mobileNavActive {
+      @extend .mobileNav;
+      transform: translateX(0%);
+   }
+}
+
+@media (max-width: 850px) {
+   .nav {
+      justify-content: space-between;
+      
+      .mobileNav {
+         display: flex;
+      }
+
+      .links {
+         display: none;
+      }
+
+      .icon {
+         display: block;
+      }
+   }
+}
+
+@media (max-width: 500px) {
+   .nav {
+
+      h2 {
+         font-size: 2rem;
+      }
+   }
+}
+
+@media (max-width: 380px) {
+   .nav {
+      height: 45px;
+      .mobileNav {
+         font-size: 1.2rem;
+         width: 220px;
+         height: inherit;
+
+         a {
+            margin-right: 10px;
+         }
+
+         .logOutBtn {
+            font-size: 1.2rem;
+         }
+      }
+
+      h2 {
+         font-size: 1.8rem;
+      }
+
+      .modal {
+         .card {
+            width: 200px;
+
+            h3 {
+               font-size: 1.5rem;
+            }
+         }
+      }
+   }
+}

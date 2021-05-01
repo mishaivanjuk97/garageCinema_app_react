@@ -1,0 +1,179 @@
+span {
+   color: chocolate;
+}
+
+.showcase {
+   overflow: hidden;
+   display: flex;
+   justify-content: space-between;
+   height: 100vh;
+   align-items: center;
+   text-align: center;
+   padding: 0 150px;
+   background: url('https://i1.wp.com/www.acousticpixel.co.uk/wp-content/uploads/2018/11/DSF5839-exit-sockets-gone.jpg?fit=3264%2C2131&ssl=1');
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+.left {
+   position: relative;
+   transition: all 1s;
+   animation: slideFromLeft 1s ease;
+}
+
+.left::before {
+   content: '';
+   position: absolute;
+   top: -70%;
+   left: -70%;
+   width: 200%;
+   height: 240%;
+   background-color: #fff;
+   opacity: 0.8;
+   transform: skewX(-24deg);
+}
+
+.form {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   align-items: left;
+   text-align: left;
+   font-size: 2rem;
+   width: 600px;
+   z-index: 10;
+}
+
+
+
+.form h2 {
+   margin-bottom: 30px;
+   color: chocolate;
+}
+
+.form label {
+   margin-bottom: 20px;
+}
+
+.form input {
+   width: 80%;
+   color: chocolate;
+   margin-bottom: 20px;
+   height: 30px;
+   font-size: 2rem;
+   padding-bottom: 5px;
+   background: transparent;
+   border: none;
+   border-bottom: 2px solid #1f1f1f;
+}
+
+.form input:focus {
+   outline: 0;
+}
+
+
+
+.btn {
+   margin-top: 20px;
+   width: 130px;
+   height: 40px;
+   font-size: 1.4rem;
+   border: 0;
+   background-color: chocolate;
+   color: #fff;
+   cursor: pointer;
+}
+
+.btn:hover {
+   background-color: transparent;
+   color: chocolate;
+   border: 1px solid chocolate;
+}
+
+.btn:focus {
+   outline: 0;
+}
+
+.btn:active {
+   transform: scale(0.9);
+}
+
+.text {
+   color: #fff;
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   z-index: 100;
+   cursor: default;
+   animation: show 1s ease;
+   margin-right: 100px;
+   transition: all 1s;
+}
+
+.text-title {
+   font-size: 2rem;
+   width: 100%;
+   margin-bottom: 15px;
+   text-shadow: 20px 10px 20px #000 ;
+}
+
+.text-subtitle {
+   position: relative;
+   z-index: 100;
+   padding: 10px 20px;
+   font-size: 1.3rem;
+   transition: all 1s;
+}
+
+.text-subtitle::after {
+   content: '';
+   position: absolute;
+   top: -400px;
+   right: -70%;
+   width: 210%;
+   height: 1500px;
+   background-color: #fff;
+   opacity: 0.8;
+   transform: skewX(-24deg);
+}
+
+.text-subtitle h2 {
+   position: relative;
+   z-index: 100;
+}
+
+
+@keyframes slideFromLeft {
+   0% {
+      transform: translateX(-100%);
+   }
+   100% {
+      transform: translateX(0);
+   }
+}
+
+@keyframes slideFromRight {
+   0% {
+      transform: translateX(100%);
+   } 
+   100% {
+      transform: translateX(0);
+   }
+}
+
+@keyframes show {
+   0% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
+   }
+}
+
+@media (min-width: 2000px) {
+   .text-subtitle {
+      width: 600px;
+   }
+}
