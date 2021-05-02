@@ -2,6 +2,8 @@ import React from 'react'
 import { useState } from 'react'
 import styles from './addMovie.module.scss'
 import { Link } from 'react-router-dom'
+import axios from 'axios'
+
 
 const AddMovie = () => {
    const [isLoadding, setIsloading] = useState(false);
@@ -25,8 +27,8 @@ const AddMovie = () => {
 
       setIsloading(true);
 
-      const response = await fetch(`http://www.omdbapi.com/?t=${titleInput}&y=${yearInput}&apikey=677bff9b`);
-      const data = await response.json();
+      const response = await axios.get(`https://www.omdbapi.com/?t=${titleInput}&y=${yearInput}&apikey=677bff9b`);
+      const data = await response.data;
 
       setError(data.Error);
       setPoster(data.Poster);

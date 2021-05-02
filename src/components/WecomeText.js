@@ -1,9 +1,9 @@
 import React from 'react'
 import styles from './login.module.scss'
 
-const WelcomeText = ({buttonValue, changeButtonValue, style}) => {
+const WelcomeText = ({buttonValue, changeButtonValue, className}) => {
       return (
-      <div className={styles.welcomeText} style={style}>
+      <div className={className}>
          <div className={styles.title}>
             <h1>Welcome</h1>
             <h1>to Garage<span>Cinema</span></h1>

@@ -277,12 +277,24 @@
    .validateMovie {
 
       margin-top: 10px;
-
+      
       .btn {
          width: 60px;
          height: 20px;
          font-size: 0.9rem;
       }
+
+      a {
+         .message {
+            height: 20px;
+            width: 100px;
+
+            p {
+               font-size: 0.9rem;   
+            }
+         }
+      }
+      
    }
 
    .card {
@@ -325,7 +337,7 @@
 @media (max-width: 400px) {
    .card {
       padding: 25px;
-      width: 250px;
+      width: 300px;
       height: 215px;
       
       .find {
@@ -338,17 +350,24 @@
             }
 
             .title {
-
+               width: 100%;
                input {
-                  width: 190px;
+                  width: 80%;
+
                }
+            }
+
+            .findBtn {
+               width: 70px;
+               height: 25px;
+               font-size: 1rem;
             }
          }
       }
 
       .poster {
 
-         width: 200px;
+         width: 250px;
          height: 350px;
          right: 25px;
          top: 200px;
@@ -356,7 +375,7 @@
    }
 
    .cardExpand {
-      width: 250px;
+      width: 300px;
       height: 1000px;
    }
 }

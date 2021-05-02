@@ -2,7 +2,7 @@ import React from 'react'
 import {useState} from 'react'
 import styles from './login.module.scss'
 
-const Form = ({style}) => {
+const Form = ({className}) => {
    const [name, setName] = useState('');
    const [email, setEmail] = useState('');
    const [password, setPassword] = useState('');
@@ -15,7 +15,7 @@ const Form = ({style}) => {
       }
    }
    return (
-      <div className={styles.left} style={style}>
+      <div className={className}>
          <form className={styles.form} onSubmit={handleSubmit}>
             <h2>Log In</h2>
             <label for="name">Name</label>

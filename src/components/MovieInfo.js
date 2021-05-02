@@ -1,3 +1,4 @@
+import axios from 'axios'
 import React from 'react'
 import { useEffect, useState } from 'react'
 import { useParams, useHistory } from 'react-router-dom'
@@ -11,8 +12,8 @@ const MovieInfo = () => {
    const [isLoadding, setIsLoading] = useState(true)
    useEffect(() => {
          const fetchData = async () => {
-            const response = await fetch(`http://www.omdbapi.com/?i=${id}&apikey=677bff9b`);
-            const data = await response.json();
+            const response = await axios.get(`https://www.omdbapi.com/?i=${id}&apikey=677bff9b`);
+            const data = await response.data;
             
             setData(data)
             setIsLoading(false)

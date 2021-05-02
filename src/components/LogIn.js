@@ -15,8 +15,8 @@ const LogIn = () => {
       }
    }
 
-   const screenHeight = window.innerHeight;
-   const screenWidth = window.innerWidth; 
+   // const screenHeight = window.innerHeight;
+   // const screenWidth = window.innerWidth; 
 
    const mobile = <Fragment>
       <div className={styles.showcase}>
@@ -28,12 +28,15 @@ const LogIn = () => {
 
 
    return (   
-      <div>   
-      {screenWidth > screenHeight ? <div className={styles.showcase}>
+      <div className={styles.showcase}>   
+      {/* {screenWidth > screenHeight ? <div className={styles.showcase}>
          <Form style={buttonValue === "About" ? {transform: "translateX(0)"} : {transform: "translateX(-250%)"}}/>
          <WelcomeText buttonValue={buttonValue} changeButtonValue={changeButtonValue} style={buttonValue === "About" ? {transform: "translateX(100%)"} : {transform: "translateX(-120%)"}}/>
          <TextSubtitle style={buttonValue === "About" ? {transform: "translateX(250%)"} : {transform: "translateX(0)"}}/>
-      </div> : mobile}
+      </div> : mobile} */}
+         <Form className={buttonValue === "About" ? styles.left : styles.movedLeft}/>
+         <WelcomeText buttonValue={buttonValue} changeButtonValue={changeButtonValue} className={buttonValue === "About" ? styles.welcomeText : styles.movedWelcomeText}/>
+         <TextSubtitle className={buttonValue === "About" ? styles.aboutText : styles.movedAboutText}/>
       </div>
    )
 }
