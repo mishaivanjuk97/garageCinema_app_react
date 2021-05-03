@@ -64,6 +64,8 @@
    box-shadow: -20px 20px 1px rgba(248, 156, 91, 0.671);
    border: 1px solid #000;
    transition: all 0.5s;
+   position: relative;
+
 
    .find {
       display: flex;
@@ -130,20 +132,30 @@
          }
       }
 
+      .error {
+         margin-top: 5px;
+      }
+
       .loading {
          position: absolute;
-         top: 200px;
-         left: 48%;
+         margin: auto;
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
          border: 8px solid #f3f3f3;
          border-top: 8px solid chocolate;
          border-radius: 50%;
          width: 80px;
          height: 80px;
          animation: spin 0.8s ease infinite;
+         z-index: 100;
       }
    }
 
    .poster {
+      background-position: center;
+      background-size: cover;
       height: 370px;
       width: 250px;
       transition: all 1s;
@@ -196,9 +208,15 @@
    .card {
       position: relative;
 
+      .find {
+
+         .loading {
+            height: 50px;
+            width: 50px;
+            border-width: 5px;
+         }
+      }
       .poster {
-         display: none;
-         
          position: absolute;
          bottom: 40px;
          right: 40px;
@@ -213,6 +231,35 @@
 
 @media (max-width: 800px) {
    .validateMovie {
+      width: 50%;
+      
+      .question {
+         font-size: 1.2rem;
+      }
+
+      p {
+         font-size: 1rem;
+      }
+   }
+
+   .card {
+      position: relative;
+      width: 585px;
+
+      .poster {
+         width: 220px;
+         height: 350px;
+      }
+   }
+
+   .cardExpand {
+      width: 585px;
+      height: 520px;
+   }
+}
+
+@media (max-width: 650px) {
+   .validateMovie {
       width: 100%;
       
       .question {
@@ -226,8 +273,8 @@
 
    .card {
       position: relative;
-      width: 285px;
-      height: 260px;
+      width: 400px;
+      height: 270px;
 
       .find {
          width: 100%;
@@ -255,15 +302,17 @@
                   width: 70px;
                }
             }
+
+            .findBtn {
+               margin-top: 10px;
+            }
             
          }
       }
       .poster {
-         display: none;
          width: 150px;
          height: 220px;
          top: 40px;
-         right: 40px;
       }
    }
 
@@ -272,6 +321,7 @@
       height: 600px;
    }
 }
+
 
 @media (max-width: 550px) {
    .validateMovie {
@@ -300,6 +350,8 @@
    .card {
       padding: 30px;
       flex-direction: column;
+      height: 250px;
+      width: 320px;
 
       .find {
 
@@ -307,7 +359,6 @@
             height: 30px;
             width: 30px;
             border-width: 3px;
-            left: 45%;
          }
 
          form {
@@ -320,11 +371,8 @@
       .poster {
          margin-top: 25px;
          position: static;
-         display: none;
          width: 285px;
-         height: 440px;
-         top: 240px;
-         right:40px;
+         height: 400px;
       }
    }
 
@@ -338,7 +386,7 @@
    .card {
       padding: 25px;
       width: 300px;
-      height: 215px;
+      height: 235px;
       
       .find {
 
@@ -366,7 +414,6 @@
       }
 
       .poster {
-
          width: 250px;
          height: 350px;
          right: 25px;
@@ -376,7 +423,22 @@
 
    .cardExpand {
       width: 300px;
-      height: 1000px;
+      height: 930px;
+   }
+}
+
+@media (max-width: 350px) {
+   .card {
+      width: 270px;
+
+      .poster {
+
+         width: 215px;
+         height: 320px;
+         right: 25px;
+         // top: 200px;
+         bottom: 25px;
+      }
    }
 }
 

@@ -93,11 +93,11 @@ const AddMovie = () => {
                </div>
                <button className={styles.findBtn}>Find</button>
             </form>
-            <div style={{marginTop: '10px'}}>{error}</div>
+            {error && <div className={styles.error}>{error}</div>}
             {isLoadding && <div className={styles.loading}></div>}
             {title && validateMovie}
          </div>
-         {title && <div className={styles.poster} style={{backgroundImage: `url(${poster})`, backgroundPosition: 'center', backgroundSize: 'cover', display: 'block'}}> 
+         {title && <div className={styles.poster} style={{backgroundImage: `url(${poster})`}}> 
          </div>}
       </div>
    )

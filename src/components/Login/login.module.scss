@@ -534,15 +534,19 @@ span {
       .welcomeText {
 
          .title {
-            font-size: 1.5rem;
+            font-size: 1.9rem;
          }
+      }
+
+      .movedWelcomeText {
+         transform: translateY(-120%);
       }
 
       .aboutText {
 
          &::after {
             top: -100px;
-            height: 550px;
+            height: 850px;
          }
 
          h2 {
@@ -561,7 +565,7 @@ span {
          animation: slideFromTop 1s ease;
          &::before {
          top: -40%;
-         height: 140%;
+         height: 160%;
          } 
 
          .form {
@@ -589,6 +593,7 @@ span {
       }
 
       .welcomeText {
+
          .title {
             font-size: 1.5rem;
          }
@@ -603,12 +608,12 @@ span {
       .left {
 
          &::before {
-            top: -20%;
+            top: -35%;
          }
       }
 
-      .welcomeText {
-         transform: translateY(50%);
+      .movedWelcomeText {
+         transform: translateY(-100%);
       }
 
       .aboutText {
@@ -628,7 +633,7 @@ span {
       .left {
 
          &::before {
-            top: -25%;
+            top: -40%;
          }
 
          .form {            
@@ -642,21 +647,37 @@ span {
       }
 
       .welcomeText {
-         transform: translateY(25%);
+         transform: translateY(35%);
 
          .title {
 
             font-size: 1.2rem;
          }
       }
+
+      .movedWelcomeText {
+         transform: translateY(-100%);
+      }
    }
 }
 
 @media (max-width: 360px) {
    .showcase {
+      .left {
+         &::before {
+            top: -50%;
+         }
+      }
 
       .welcomeText {
          transform: translateY(30%);
+         
+         .title {
+            font-size: 1rem;
+         }
+      }
+      .movedWelcomeText {
+         transform: translateY(-110%);
       }
 
       .aboutText {
@@ -697,11 +718,11 @@ span {
 
       .aboutText {
          width: 270px;
-         top: -15%;
+         top: -10%;
 
          &::after{
-            height: 500px;
-            top: -60px;
+            height: 400px;
+            top: -40px;
          }
 
          h2 {

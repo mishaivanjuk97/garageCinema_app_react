@@ -54,9 +54,7 @@ a {
 }
 
 .loading {
-   position: absolute;
-   top: 200px;
-   left: 48%;
+   margin: 100px auto;
    border: 8px solid #f3f3f3;
    border-top: 8px solid chocolate;
    border-radius: 50%;
@@ -79,7 +77,6 @@ a {
       height: 50px;
       width: 50px;
       border-width: 5px;
-      left: 45%;
    }
 }
 
@@ -107,7 +104,6 @@ a {
       height: 30px;
       width: 30px;
       border-width: 3px;
-      left: 45%;
    }
 }
 

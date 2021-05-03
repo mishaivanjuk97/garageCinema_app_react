@@ -164,6 +164,11 @@
       }
    }
 
+   .hideModal {
+      @extend .modal;
+      transform: translateY(-200%);
+   }
+
    .mobileNav {
       font-size: 1.3rem;
       display: none;
@@ -173,7 +178,7 @@
       height: 60px;
       width: 280px; 
       position: absolute;
-      transform: translateX(200%);
+      transform: translateX(0);
       transition: transform 0.5s ease;
 
       a {
@@ -206,9 +211,9 @@
       }
    }
 
-   .mobileNavActive {
+   .hideMobileNav {
       @extend .mobileNav;
-      transform: translateX(0%);
+      transform: translateX(-200%);
    }
 }
 
@@ -262,7 +267,7 @@
 
       .modal {
          .card {
-            width: 200px;
+            width: 250px;
 
             h3 {
                font-size: 1.5rem;

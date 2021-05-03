@@ -1,7 +1,5 @@
 .loading {
-   position: absolute;
-   top: 200px;
-   left: 48%;
+   margin: 100px auto;
    border: 8px solid #f3f3f3;
    border-top: 8px solid chocolate;
    border-radius: 50%;
@@ -72,7 +70,6 @@
       height: 100%;
       width: 100%;
       transition: transform 0.5s;
-      overflow: hidden;
 
       .card {
          width: 300px;
@@ -115,6 +112,11 @@
             }
          }
       }
+   }
+
+   .hideModal {
+      @extend .modal;
+      transform: translateY(-200%);
    }
 }
 
@@ -216,6 +218,13 @@
             width: 250px;
          }
       }
+
+      .modal {
+
+         .card {
+            margin-top: 430px;
+         }
+      }
    }
 }
 
@@ -263,7 +272,8 @@
 
       .modal {
          .card {
-            width: 200px;
+            margin-top: 500px;           
+            width: 250px;
 
             h3 {
                font-size: 1.5rem;

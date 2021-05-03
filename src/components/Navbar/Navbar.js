@@ -16,14 +16,14 @@ const Navbar = () => {
 
    }
 
-   const showMobileNav = <div className={styles.mobileNavActive} style={mobileNav ? {transform: 'translateX(0%)'} : {transform: 'translateX(-200%)'}}>
+   const showMobileNav = <div className={mobileNav ? styles.mobileNav : styles.hideMobileNav}>
                         <Link to="/">Movies</Link>
                         <Link to="/add">Add</Link>
                         <button onClick={() => setModal(true)} className={styles.logOutBtn}>Log out</button>
                         </div>
 
    const showModal = 
-      <div className={styles.modal} style={modal ? {transform: 'translateY(0)'} : {transform: 'translateY(-100%)'}}>
+      <div className={modal ? styles.modal : styles.hideModal}>
          <div className={styles.card}>
             <h3>Are you sure?</h3>
             <div className={styles.answer}>

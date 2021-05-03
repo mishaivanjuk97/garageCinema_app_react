@@ -1,11 +1,11 @@
 import {Fragment} from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
-import LogIn from "./components/LogIn";
-import MovieList from "./components/MovieList";
-import Navbar from "./components/Navbar";
-import AddMovie from "./components/AddMovie";
-import MovieInfo from './components/MovieInfo';
+import LogIn from "./components/Login/LogIn";
+import MovieList from "./components/MovieList/MovieList";
+import Navbar from "./components/Navbar/Navbar";
+import AddMovie from "./components/AddMovie/AddMovie";
+import MovieInfo from './components/MovieInfo/MovieInfo';
 
 function App() {
   const loggedIn = JSON.parse(localStorage.getItem('user'))

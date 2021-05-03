@@ -31,7 +31,7 @@ const MovieInfo = () => {
    }
 
    const showModal = 
-      <div className={styles.modal} style={modal ? {transform: 'translateY(0)'} : {transform: 'translateY(-100%)'}}>
+      <div className={modal ? styles.modal : styles.hideModal}>
          <div className={styles.card}>
             <h3>Are you sure?</h3>
             <div className={styles.answer}>
