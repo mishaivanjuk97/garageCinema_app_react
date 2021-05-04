@@ -8,7 +8,7 @@ const WelcomeText = ({buttonValue, changeButtonValue, className}) => {
             <h1>Welcome</h1>
             <h1>to Garage<span>Cinema</span></h1>
          </div>
-         <button type="submit" className={styles.btn} onClick={changeButtonValue}>{buttonValue}</button>
+         <button className={styles.btn} onClick={changeButtonValue}>{buttonValue}</button>
       </div>
    )
 }

@@ -19,12 +19,12 @@ const AddMovie = () => {
    const [genre, setGenre] = useState('');
    const [error, setError] = useState(null);
    const [poster, setPoster] = useState('');
-   const [id, setId] = useState('');    
+   const [id, setId] = useState('');
    
 
    const findMovie = async (e) => {
       e.preventDefault();
-
+      
       setIsloading(true);
 
       const response = await axios.get(`https://www.omdbapi.com/?t=${titleInput}&y=${yearInput}&apikey=677bff9b`);
@@ -39,12 +39,15 @@ const AddMovie = () => {
       setPlot(data.Plot);
       setId(data.imdbID);
       setGenre(data.Genre);
-
+      setSuccess(false);
       setIsloading(false);  
+
    }
 
    const addMovie = () => {
-      const movie = {title, year, director, id, actors, genre};
+      const suggested = JSON.parse(localStorage.getItem('user')).name;
+
+      const movie = {title, year, director, id, actors, genre, suggested};
       let movies;
 
       if(localStorage.getItem('movies') === null) {

@@ -10,7 +10,6 @@ const Navbar = () => {
       history.push('/')
 
       localStorage.removeItem('user');
-      localStorage.removeItem('movies');
       window.location.reload();
       setModal(false);
 
