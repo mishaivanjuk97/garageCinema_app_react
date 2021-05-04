@@ -43,17 +43,18 @@ span {
          width: 600px;
          z-index: 10;
 
+
          h2 {
             margin-bottom: 30px;
             color: chocolate;
          }
 
          input {
+            -webkit-appearance: none;
             width: 80%;
             color: chocolate;
             margin-bottom: 20px;
-            font-size: 2rem;
-            padding-bottom: 5px;
+            font-size: 1.5rem;
             background: transparent;
             border: none;
             border-bottom: 2px solid #1f1f1f;
@@ -253,7 +254,7 @@ span {
             font-size: 1.7rem;
 
             input {
-               font-size: 1.7rem;
+               font-size: 1.3rem;
             }
          }
       }
@@ -291,7 +292,7 @@ span {
             }
 
             input {
-               font-size: 1.5rem;
+               font-size: 1.2rem;
                border-bottom: 1px solid #1f1f1f;
             }
          }
@@ -336,8 +337,7 @@ span {
             }
 
             input {
-               font-size: 1.3rem;
-               border-bottom: 1px solid #1f1f1f;
+               font-size: 1.1rem;
             }
          }
       }
@@ -579,7 +579,8 @@ span {
             }
 
             input {
-               font-size: 1.2rem;
+               padding: 10px 0;
+               font-size: 1rem;
                margin-bottom: 10px;
                height: 20px;
             }
@@ -619,9 +620,17 @@ span {
       .aboutText {
          width: 350px;
       
+         &::after {
+            height: 550px;
+         }
+
          h2 {
            font-size: 1.1rem;
          }
+      }
+
+      .movedAboutText {
+         transform: translateY(-50%);
       }
    }
 }
