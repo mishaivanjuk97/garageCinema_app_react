@@ -594,10 +594,26 @@ span {
       }
 
       .welcomeText {
+         transform: translateY(40%);
 
          .title {
             font-size: 1.5rem;
          }
+      }
+
+      .movedWelcomeText {
+         transform: translateY(-120%);
+      }
+
+      .aboutText {
+
+         h2 {
+           font-size: 1.1rem;
+         }
+      }
+
+      .movedAboutText {
+         transform: translateY(-50%);
       }
    }
 }
@@ -613,19 +629,29 @@ span {
          }
       }
 
+      .welcomeText {
+         transform: translateY(35%);
+
+         .title {
+            font-size: 1.2rem;
+         }
+      }
+      
+
       .movedWelcomeText {
-         transform: translateY(-100%);
+         transform: translateY(-120%);
       }
 
       .aboutText {
-         width: 350px;
+         width: 95%;
       
          &::after {
             height: 550px;
+            top: -80px;
          }
 
          h2 {
-           font-size: 1.1rem;
+           font-size: 0.9rem;
          }
       }
 
@@ -655,17 +681,8 @@ span {
          }
       }
 
-      .welcomeText {
-         transform: translateY(35%);
-
-         .title {
-
-            font-size: 1.2rem;
-         }
-      }
-
       .movedWelcomeText {
-         transform: translateY(-100%);
+         transform: translateY(-120%);
       }
    }
 }
@@ -690,9 +707,12 @@ span {
       }
 
       .aboutText {
+         &::after {
+            top: -50px;
+         }
 
          h2 {
-            font-size: 1rem;
+            font-size: 0.8rem;
          }
       }
    }
@@ -726,8 +746,7 @@ span {
       }
 
       .aboutText {
-         width: 270px;
-         top: -10%;
+         width: 90%;
 
          &::after{
             height: 400px;
@@ -735,7 +754,7 @@ span {
          }
 
          h2 {
-            font-size: 0.9rem;
+            font-size: 0.7rem;
 
          }
       }
