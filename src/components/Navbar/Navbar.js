@@ -16,8 +16,8 @@ const Navbar = () => {
    }
 
    const showMobileNav = <div className={mobileNav ? styles.mobileNav : styles.hideMobileNav}>
-                        <Link to="/">Movies</Link>
-                        <Link to="/add">Add</Link>
+                        <Link to="/" onClick={() => setMobileNav(false)}>Movies</Link>
+                        <Link to="/add" onClick={() => setMobileNav(false)}>Add</Link>
                         <button onClick={() => setModal(true)} className={styles.logOutBtn}>Log out</button>
                         </div>
 
